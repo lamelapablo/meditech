@@ -2,7 +2,6 @@
 
 include 'nav_correspondiente.php';
 
-
 function mostrar_pantalla(){
 
     $user = $_SESSION['usuario'];

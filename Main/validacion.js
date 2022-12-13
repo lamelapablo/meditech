@@ -80,57 +80,66 @@ function getDataForm(idForm){
     return formData;
 }
 
-function consulta_asincrona(url, method='POST'){
-    const promise = new Promise((resolve, reject) =>{
-        var xhr =  conectAjax();
-        var dataForm = getDataForm('login-form');
-        if(xhr) {
-            xhr.open(method, url, true);                  // false = sincro , true = asincro
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState!=1) {
-                    document.body.style.cursor = 'wait';            // SET ESPERA Cursor mouse en espera
-                }
-                if (xhr.readyState==4 && xhr.status==200) {                                                
-                    document.body.style.cursor = 'default';        // RESET ESPERA Cursor mouse en normal
-                    textHTML = xhr.responseText;                   // recupera la respuesta            
-                    resolve(textHTML);
-                }
-            }
-            xhr.send(dataForm);
-        }
-        else{
-            console.log('No se pudo instanciar el objeto AJAX!');
-            reject('Algo ha salido mal!');
-        }
+async function consulta_asincrona(url, method='POST'){
+    // const promise = new Promise((resolve, reject) =>{
+    //     var xhr =  conectAjax();
+    //     var dataForm = getDataForm('login-form');
+    //     if(xhr) {
+    //         xhr.open(method, url, true);                  // false = sincro , true = asincro
+    //         xhr.onreadystatechange = function() {
+    //             if (xhr.readyState!=1) {
+    //                 document.body.style.cursor = 'wait';            // SET ESPERA Cursor mouse en espera
+    //             }
+    //             if (xhr.readyState==4 && xhr.status==200) {                                                
+    //                 document.body.style.cursor = 'default';        // RESET ESPERA Cursor mouse en normal
+    //                 textHTML = xhr.responseText;                   // recupera la respuesta            
+    //                 resolve(textHTML);
+    //             }
+    //         }
+    //         xhr.send(dataForm);
+    //     }
+    //     else{
+    //         console.log('No se pudo instanciar el objeto AJAX!');
+    //         reject('Algo ha salido mal!');
+    //     }
 
+    // })
+
+    // const promiseResult = promise.then((resolvedResult) => {
+    //     const result = resolvedResult;
+    //     return result;
+    // }, (rejectedResult) => {
+    //     console.warn(rejectedResult);
+    // })
+
+    // return promiseResult;
+    var dataForm = getDataForm('login-form');
+    const response = await fetch(url, {
+        method: method,
+        body: dataForm
     })
 
-    const promiseResult = promise.then((resolvedResult) => {
-        const result = resolvedResult;
-        return result;
-    }, (rejectedResult) => {
-        console.warn(rejectedResult);
-    })
+    const data = await response.json();
 
-    return promiseResult;
+    return data;
 }
 
 // Hace que no se pueda enviar el FORM si faltan datos.
 async function validarForm(url){
     
-    res = false; 
     if(validateEmail() == true && validatePass() == true){
 
+        //consultaCredencialesUserLogueandose = JSON.parse(await consulta_asincrona(url));
         consultaCredencialesUserLogueandose = await consulta_asincrona(url);
 
-        boolConsulta = Boolean(parseInt(consultaCredencialesUserLogueandose));
+        console.log(consultaCredencialesUserLogueandose);
 
-        if(! boolConsulta){
+        if(! consultaCredencialesUserLogueandose.credenciales){
             mensajeError.innerHTML = 'Credenciales incorrectas!';
             modalCampoVacio.showModal();
         }
         else{
-            window.location.href = 'menu.php';
+            window.location.href = "menu.php";
         }
     }
     else if(emailPass.value == '' || emailCampo.value == ''){

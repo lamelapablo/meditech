@@ -59,11 +59,11 @@ function loguear($conn){
         $resultForDoctor = ejecutarSQL($conn, $queryForDoctor);
         $usuario = verificar_es_doctor($usuario, $resultForDoctor);
         iniciarSesion($usuario);
-        echo('1');
+        echo(json_encode(array("credenciales" => true)));
     }
     else{
-        echo('0');
-    }    
+        echo(json_encode(array("credenciales" => false)));
+    } 
 }
 
 function verificar_es_doctor($usuario, $result){
@@ -82,8 +82,13 @@ function main(){
 
     session_start();
 
-    if(isset($_REQUEST['userEmail']) && isset($_REQUEST['password']) ) {            
+    if(isset($_SESSION['usuario'])){
+        echo(json_encode(array("credenciales" => true)));
+    }
+    else{
+        if(isset($_REQUEST['userEmail']) && isset($_REQUEST['password']) ) {            
             loguear($conn);     
+        }
     }
     
     desconectarBD($conn);                // desconecta la base de datos
