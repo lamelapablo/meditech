@@ -1,0 +1,153 @@
+dialog{
+    margin: auto;
+    border-radius: 8px;
+}
+
+dialog div{
+    height: 130px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: background-color .5s, color .5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: 10px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .5s, color .5s;
+    background-color: #62b6cb;
+}
+
+
+main{
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+main h2{
+    margin-bottom: 10px;
+}
+
+.mostrar{
+    display: inline;
+}
+
+.ocultar{
+    display: none;
+}
+
+form{
+    min-width: 360px;
+    min-height: 300px;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,182,203,1) 0%, rgba(98,182,203,1) 100%);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-contenedor{
+    height: 100%;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div > div{
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+
+form > div > div a{
+    text-decoration: none;
+    color: #000;
+}
+
+input[name='password'] {
+    height: 40px;
+    border-radius: 6px;
+    padding: 4px;
+    width: 280px;
+}
+
+input[name="confirm-button"]{
+    background-color: #fff;
+    transition: background-color .5s;
+}
+
+form > #form-contenedor > div:nth-last-child(-n+3){
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 501px){
+    input[name="confirm-button"]:hover{
+        cursor: pointer;
+        color: #fff;
+        transition: background-color .5s, color .5s;
+        background-color: transparent;
+    }
+    
+    form > #form-contenedor > div > a:hover{
+        cursor: pointer
+    }
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    width: 180px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+}
+  
+
+.tooltip .tooltiptext {
+    bottom: 120%;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%; 
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}

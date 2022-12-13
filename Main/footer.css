@@ -1,0 +1,104 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    height: 30vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,182,203,1) 0%, rgba(98,182,203,1) 100%); 
+    justify-content: space-around;
+    position: relative;
+}
+
+#contenedor-footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#social{
+    display: flex;
+}
+
+#legal{
+    display: flex;
+    justify-content: center;
+    margin: 2vh 0;
+}
+
+#ayuda > div > a{
+    text-decoration:none;
+    color:#fff;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    box-sizing: border-box;
+}
+
+#ayuda > div{
+    display: flex;
+    align-items: center;
+}
+
+#ayuda{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#social{
+    display: flex;
+    align-items: center;
+    height: 60%;
+}
+
+#social > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+#social > ul > li > a{
+    text-decoration:none;
+    color:#fff;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+    display: inline;
+}
+
+#social li{
+    display: flex;
+    align-items: center;
+}
+
+@media (min-width: 501px){
+    #ayuda > div > a:hover, #ayuda > div > a:focus{
+        background-size: 100% 2px;
+    }
+
+    #social > ul > li > a:hover, #social> ul > li > a:focus{
+        background-size: 100% 2px;
+    }
+}
+
+@media (max-width: 500px){
+
+    #contenedor-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    footer{
+        min-height: 340px;
+    }
+
+}

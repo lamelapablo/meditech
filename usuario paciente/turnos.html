@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../main/header.css">
+    <link rel="stylesheet" type="text/css" href="../main/footer.css">
+    <link rel="stylesheet" type="text/css" href="turnos.css">
+    <link rel="stylesheet" type="text/css" href="nav.css">
+    <link rel="stylesheet" type="text/css" href="../iconos/iconos.css">
+    <link rel="icon" href="../imagenes/icono.ico">
+    <title>Portal de Salud Meditech</title>
+</head>
+<body>
+    <dialog id='modal-cancelar-turno'>
+        <form method="#">
+            <h3>¿Seguro que quieres cancelar tu turno?</h3>
+            <div class='btn-container'>
+                <button id='btn-cerrar-modal-turno' class="btn-turno" type="reset">Cancelar</button>
+                <button class='btn-turno' type='submit'>Confirmar</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id='modal-ver-comentarios'>
+        <section>
+            <h3>Comentarios:</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis hic est soluta quos dignissimos repellat iusto iste voluptatem nisi? Soluta distinctio labore iusto architecto nemo aut eos porro excepturi culpa.</p>
+            <h3>Asistió: </h3>
+            <button id='btn-cerrar-modal-comentarios' class="btn-turno" type="reset">Cerrar</button>
+        </section>
+    </dialog>
+    <header>
+        <a href="menu.html">
+            <img id="headerlogo" src='../imagenes/LOGO HEADER.png'>
+        </a>
+        <img class='icono' id='btn-menu' src='../iconos/bars-solid.svg'>
+    </header>
+    <div class="menu-flex">
+        <nav class="container-menu">
+            <ul> 
+                <a href="menu.html">
+                    <li>
+                        <img class='icono' src="../iconos/house-solid.svg">
+                        <p>Menu</p>
+                    </li>
+                </a>
+                <a href="turnos.html">
+                    <li>
+                        <img class= 'icono' src="../iconos/calendar-check-solid.svg">
+                        <p>Turnos</p> 
+                    </li>
+                </a> 
+                <a href="especialidades.html">
+                    <li>
+                        <img class='icono' src="../iconos/user-doctor-solid.svg">
+                        <p>Especialidades</p> 
+                    </li>
+                </a>
+                <a href="micuenta.html">
+                    <li>
+                        <img class='icono' src="../iconos/circle-user-solid.svg">
+                        <p>Mi Cuenta</p> 
+                    </li>
+                </a>
+            </ul>        
+        </nav>
+        <section id="contenido">
+            <a id='container-btn-pedir-turno' href="especialidades.html">
+                <button id='btn-pedir-turno' class='btn-turno'>Pedir un turno</button>
+            </a>
+            <div class="turnos-container">
+                <div class="btn-buscar-container">
+                    <button class="btn-buscar-turnos">Buscar por Especialidad</button>
+                    <button class="btn-buscar-turnos">Buscar por Médico</button>
+                    <button class="btn-buscar-turnos">Buscar por Fecha</button>
+                </div>
+                <div class="input-container">
+                    <img class='icono' src="../iconos/magnifying-glass-solid.svg">
+                    <input id='input-buscar-turnos' type="text" placeholder="Buscar turno por Epecialidad">
+                </div>
+                <ul id='lista-turnos-dia' class='lista-turnos'>
+                    <div id="titulo-turnos-dia">
+                        <h2>Turnos del dia:</h2>
+                        <button class='btn-turno btn-cancelar-turno'>Cancelar Turnos del Dia</button>                    
+                    </div>
+                    <h3 id='turnos-dia-no-encontrados' class="ocultar">No hay turnos por venir para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Cardiología</span></p>
+                            <p>Médico: <span class="medico">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Ginecología</span></p>
+                            <p>Médico: <span class="medico">Pablo Gabriel Lamela</span></p>
+                            <p>Fecha: <span class="fecha">10/12/2021</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>                    
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Neurología</span></p>
+                            <p>Médico: <span class="medico">Juan Pejinakis</span></p>
+                            <p>Fecha: <span class="fecha">20/03/2020</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Urología</span></p>
+                            <p>Médico: <span class="medico">Milagros Luz Soler</span></p>
+                            <p>Fecha: <span class="fecha">04/10/2019</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Pediatría</span></p>
+                            <p>Médico: <span class="medico">Matias Colombo</span></p>
+                            <p>Fecha: <span class="fecha">28/7/2018</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul id='lista-turnos-futuros' class='lista-turnos'>
+                    <h2>Turnos por venir:</h2>
+                    <h3 id='turnos-f-no-encontrados' class="ocultar">No hay turnos por venir para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Cardiología</span></p>
+                            <p>Médico: <span class="medico">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Ginecología</span></p>
+                            <p>Médico: <span class="medico">Pablo Gabriel Lamela</span></p>
+                            <p>Fecha: <span class="fecha">10/12/2021</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>                    
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Neurología</span></p>
+                            <p>Médico: <span class="medico">Juan Pejinakis</span></p>
+                            <p>Fecha: <span class="fecha">20/03/2020</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Urología</span></p>
+                            <p>Médico: <span class="medico">Milagros Luz Soler</span></p>
+                            <p>Fecha: <span class="fecha">04/10/2019</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Pediatría</span></p>
+                            <p>Médico: <span class="medico">Matias Colombo</span></p>
+                            <p>Fecha: <span class="fecha">28/7/2018</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul id="lista-turnos-pasados" class='lista-turnos'>
+                    <h2>Turnos pasados:</h2>
+                    <h3 id='turnos-p-no-encontrados' class="ocultar">No hay turnos pasados para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Cardiología</span></p>
+                            <p>Médico: <span class="medico">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-ver-comentario'>Ver Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Ginecología</span></p>
+                            <p>Médico: <span class="medico">Pablo Gabriel Lamela</span></p>
+                            <p>Fecha: <span class="fecha">10/12/2021</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-ver-comentario'>Ver Comentarios</button>
+                        </div>                    
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Neurología</span></p>
+                            <p>Médico: <span class="medico">Juan Pejinakis</span></p>
+                            <p>Fecha: <span class="fecha">20/03/2020</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-ver-comentario'>Ver Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Urología</span></p>
+                            <p>Médico: <span class="medico">Micaela Aguirre</span></p>
+                            <p>Fecha: <span class="fecha">04/10/2019</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-ver-comentario'>Ver Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Especialidad: <span class="especialidad">Pediatría</span></p>
+                            <p>Médico: <span class="medico">Estefanía Garcilazo</span></p>
+                            <p>Fecha: <span class="fecha">28/7/2018</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-ver-comentario'>Ver Comentarios</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>    
+    </div> 
+    <footer>
+        <div id="contenedor-footer">
+            <section id="ayuda">
+                <p>Servicio al cliente:</p>
+                <div>
+                    <img class='icono' src="../iconos/clock-regular.svg">
+                    <p>Horario de atencion: 8:00 hs - 18:00 hs</p>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/envelope-regular.svg">
+                    <a id="mail" href="mailto:soporte@meditech.com">Enviar un email</a>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/phone-solid.svg">
+                    <p>Télefono de contacto: 0800-11-3825-0894</p>
+                </div>
+            </section>
+            <section id='social'>
+                <ul>
+                    <li>
+                        <img class='icono' src="../iconos/instagram.svg">
+                        <a href="http://instagram.com">Instagram</a></li>
+                    <li>
+                        <img class='icono' src="../iconos/square-twitter.svg">
+                        <a href='http://twitter.com'>Twitter</a>
+                    </li>
+                    <li>
+                        <img class='icono' src="../iconos/facebook.svg">
+                        <a href='http://facebook.com'>Facebook</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section id="legal">
+            <p>&#169 Copyright 2022 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+    <script type="text/javascript" src="nav-responsive.js"></script>
+    <script type="text/javascript" src="turnos.js"></script>
+</body>
+</html>

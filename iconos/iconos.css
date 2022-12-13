@@ -1,0 +1,65 @@
+.icono{
+    width: 20px;
+    height: 20px;
+}
+
+#btn-menu{
+    margin-right: 40px;
+    transform: none;
+    transition: transform 1s;
+}
+
+.rotating{
+    animation: rotation 1s;
+    animation-fill-mode: forwards;
+}
+
+footer .icono{
+    filter: invert(100%);
+    margin-right: 8px;
+}
+
+#form-contenedor .icono{
+    filter: invert(100%);
+    margin: 0 12px;
+}
+
+/* #mostrar, #mostrar1{
+    display: inline;
+}
+
+#ocultar, #ocultar1{
+    display: none;
+} */
+
+.flecha-menu{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    transform: rotate(-90deg);
+    transition: transform .4s;
+}
+
+.girar-flecha .flecha-menu{
+    transform: rotate(0);
+    transition: transform .4s;
+}
+
+#btn-menu{
+    transition: transform .6s;
+}
+
+.icono-tick{
+    width: 50px;
+    height: 50px;
+    filter: invert(42%) sepia(79%) saturate(422%) hue-rotate(83deg) brightness(89%) contrast(84%);
+}
+
+.selected{
+    visibility: visible;
+}
+
+.not-selected{
+    visibility: hidden;
+}
+

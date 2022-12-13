@@ -1,0 +1,70 @@
+#contenido{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenido h2{
+    margin-bottom: 10px;
+}
+
+.carrusel{
+    height: auto; 
+    max-width: 500px;
+    /* padding: 2em; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.carrusel h2{
+    /* padding-bottom: 5%; */
+    min-height: 10vh;
+}
+
+.carrusel .grande{
+    width: 200%;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 6px 8px 0px; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 2em; */
+    transition: all .5s ease;
+    transform: translateX(0%)
+}
+.carrusel .img{
+    width: calc(100% / 2  - 2em);
+    height: calc(100% / 2)
+    
+}
+
+.carrusel .puntos{
+    list-style-type: none;
+    width: 100%;
+    /* padding: 1em; */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}  
+
+.carrusel .punto{
+    width: 2em;
+    height: 2em;
+    background-color: lightgray;
+    margin: 1em 1em 0;
+    border-radius: 1em;
+}
+
+.carrusel .punto.activo {
+    background-color: rgba(98,182,203,1) ;
+}
+
+@media (max-width: 600px){
+    .carrusel{
+        padding: 0;
+    }
+}

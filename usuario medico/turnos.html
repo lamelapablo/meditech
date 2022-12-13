@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../main/footer.css">
+    <link rel="stylesheet" type="text/css" href="../main/header.css">
+    <link rel="stylesheet" type="text/css" href="turnos.css">
+    <link rel="stylesheet" type="text/css" href="../usuario paciente/nav.css">
+    <link rel="stylesheet" type="text/css" href="../iconos/iconos.css">
+    <link rel="icon" href="../imagenes/icono.ico">
+    <title>Portal Web MediTech</title>
+</head>
+<body>
+    <dialog id='modal-cancelar-turno'>
+        <form method="#">
+            <h3>¿Seguro que quieres cancelar tu turno?</h3>
+            <div class='btn-container'>
+                <button id='btn-cerrar-modal-turno' class="btn-turno" type="reset">Cancelar</button>
+                <button id="btn-confirmar" class='btn-turno' type='submit'>Confirmar</button>
+            </div>
+        </form>
+    </dialog>
+    <dialog id='modal-editar-comentarios'>
+        <form method="#">
+            <h3>Comentarios:</h3>
+            <p contenteditable="true">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis hic est soluta quos dignissimos repellat iusto iste voluptatem nisi? Soluta distinctio labore iusto architecto nemo aut eos poo excepturi culpa.</p>
+            <label><input type="checkbox" id="cbox1" value="">Asistió</label><br>
+            <div class='btn-container'>
+                <button id='btn-cerrar-modal-comentarios' class="btn-turno" type="reset">Cerrar</button>
+                <button class='btn-turno' type='submit'>Guardar</button>
+            </div>
+        </form>
+    </dialog>
+    <header>
+        <a href="menu.html">
+            <img id="headerlogo" src='../imagenes/LOGO HEADER.png'>
+        </a>
+        <img class='icono' id='btn-menu' src='../iconos/bars-solid.svg'>
+    </header>
+    <div class="menu-flex">
+        <nav class="container-menu">
+            <ul>
+                <a href="menu.html">
+                    <li>
+                        <img class='icono' src="../iconos/house-solid.svg">
+                        <p>Menu</p>
+                    </li>
+                </a>
+                <a href="turnos.html">
+                    <li>
+                        <img class= 'icono' src="../iconos/calendar-check-solid.svg">
+                        <p>Turnos</p>
+                    </li>
+                </a>
+                </a>
+                <a href="micuenta.html">
+                    <li>
+                        <img class='icono' src="../iconos/circle-user-solid.svg">
+                        <p>Mi Cuenta</p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+        <section id="contenido">
+            <div class="turnos-container">
+                <div class="btn-buscar-container">
+                    <button class="btn-buscar-turnos">Buscar por Paciente</button>
+                    <button class="btn-buscar-turnos">Buscar por Fecha</button>
+                </div>
+                <div class="input-container">
+                    <img class='icono' src="../iconos/magnifying-glass-solid.svg">
+                    <input id='input-buscar-turnos' type="text" placeholder="Buscar turno por Paciente">
+                </div>
+                <ul id='lista-turnos-dia' class='lista-turnos'>
+                    <div id="titulo-turnos-dia">
+                        <h2>Turnos del dia:</h2>
+                        <button class='btn-turno btn-cancelar-turno'>Cancelar Turnos del Dia</button>                    
+                    </div>
+                    <h3 id='turnos-dia-no-encontrados' class="ocultar">No hay turnos del dia para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Pablo Lamela</span></p>
+                            <p>Fecha: <span class="fecha">17/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Pejinakis </span></p>
+                            <p>Fecha: <span class="fecha">09/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Micaela Aguirre </span></p>
+                            <p>Fecha: <span class="fecha">29/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Milagros Soler </span></p>
+                            <p>Fecha: <span class="fecha">23/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul id='lista-turnos-futuros' class='lista-turnos'>
+                    <h2>Turnos por venir:</h2>
+                    <h3 id='turnos-f-no-encontrados' class="ocultar">No hay turnos por venir para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Pablo Lamela</span></p>
+                            <p>Fecha: <span class="fecha">17/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Pejinakis </span></p>
+                            <p>Fecha: <span class="fecha">09/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Micaela Aguirre </span></p>
+                            <p>Fecha: <span class="fecha">29/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Milagros Soler </span></p>
+                            <p>Fecha: <span class="fecha">23/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-cancelar-turno'>Cancelar Turno</button>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                </ul>
+                <ul id="lista-turnos-pasados" class='lista-turnos'>
+                    <h2>Turnos atendidos:</h2>
+                    <h3 id='turnos-p-no-encontrados' class="ocultar">No hay turnos pasados para mostrar.</h3>
+                    <li class="mostrar"><h3>Turno 1:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Cruz Gonzalez</span></p>
+                            <p>Fecha: <span class="fecha">16/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 2:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Pablo Lamela</span></p>
+                            <p>Fecha: <span class="fecha">14/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 3:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Juan Pejinakis </span></p>
+                            <p>Fecha: <span class="fecha">05/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 4:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Micaela Aguirre </span></p>
+                            <p>Fecha: <span class="fecha">04/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                    <li class="mostrar"><h3>Turno 5:</h3>
+                        <div>
+                            <p>Paciente: <span class="paciente">Milagros Soler </span></p>
+                            <p>Fecha: <span class="fecha">03/09/2022</span></p>
+                            <p>Hora: <span class="hora">15:00hs</span></p>
+                        </div>
+                        <div>
+                            <button class='btn-turno btn-editar-comentario'>Editar Comentarios</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div id="contenedor-footer">
+            <section id="ayuda">
+                <p>Servicio al cliente:</p>
+                <div>
+                    <img class='icono' src="../iconos/clock-regular.svg">
+                    <p>Horario de atencion: 8:00 hs - 18:00 hs</p>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/envelope-regular.svg">
+                    <a id="mail" href="mailto:soporte@meditech.com">Enviar un email</a>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/phone-solid.svg">
+                    <p>Télefono de contacto: 0800-11-3825-0894</p>
+                </div>
+            </section>
+            <section id='social'>
+                <ul>
+                    <li>
+                        <img class='icono' src="../iconos/instagram.svg">
+                        <a href="http://instagram.com">Instagram</a></li>
+                    <li>
+                        <img class='icono' src="../iconos/square-twitter.svg">
+                        <a href='http://twitter.com'>Twitter</a>
+                    </li>
+                    <li>
+                        <img class='icono' src="../iconos/facebook.svg">
+                        <a href='http://facebook.com'>Facebook</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section id="legal">
+            <p>&#169 Copyright 2022 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+    <script type="text/javascript" src="../usuario paciente/nav-responsive.js"></script>
+    <script type="text/javascript" src="turnos.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar contraseña</title>
+    <link rel="stylesheet" type="text/css" href="../Main/footer.css">
+    <link rel="stylesheet" type="text/css" href="../Main/header.css">
+    <link rel="stylesheet" type="text/css" href="../Main/normalize.css">
+    <link rel="stylesheet" type="text/css" href="cambiar-contraseña.css">
+    <link rel="stylesheet" type="text/css" href="../iconos/iconos.css">
+    <link rel="icon" href="../imagenes/icono.ico">
+</head>
+<body>
+    <dialog id='completar-campos'>
+        <div>
+            <h3>Faltan completar campos</h3>
+            <button class='btn' id="btn-cerrar">Cerrar</button>
+        </div>
+    </dialog>
+    <header>
+        <a href="../usuario paciente/menu.html">
+            <img id="headerlogo" src='../imagenes/LOGO HEADER.png'>
+        </a>
+    </header>
+    <main>
+        <h2>Cambiar Contraseña</h2>
+        <form id="form" onsubmit="return validarForm()">
+            <div id="form-contenedor">
+                <div class="tooltip">
+                    <img class='icono' src="../iconos/key-solid.svg"></img>
+                    <input id='nueva-pswrd' type="password" name="password" placeholder="Ingrese su nueva contraseña">
+                    <img class='icono icono-pswrd mostrar' id='mostrar' src='../iconos/eye-solid.svg'>
+                    <img class='icono icono-pswrd ocultar' id='ocultar' src='../iconos/eye-slash-solid.svg'>
+                    <span class='tooltiptext ocultar'>La contraseña debe contener 6 caracteres como mínimo.</span>               
+                </div>
+                <div class="tooltip">
+                    <img class='icono' src="../iconos/key-solid.svg">
+                    <input id="confirmar-pswrd" type="password" name="password" placeholder="Reingrese su nueva contraseña">
+                    <img class="icono icono-pswrd mostrar" src="../iconos/eye-solid.svg">
+                    <img class='icono icono-pswrd ocultar' src='../iconos/eye-slash-solid.svg'>
+                    <span class="tooltiptext ocultar">Las contraseñas no son iguales.</span> 
+                </div>
+                <div><input class='btn' id='btn-confirmar' type="submit" value="Confirmar" name="confirm-button"></div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <div id="contenedor-footer">
+            <section id="ayuda">
+                <p>Servicio al cliente:</p>
+                <div>
+                    <img class='icono' src="../iconos/clock-regular.svg">
+                    <p>Horario de atencion: 8:00 hs - 18:00 hs</p>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/envelope-regular.svg">
+                    <a id="mail" href="mailto:soporte@meditech.com">Enviar un email</a>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/phone-solid.svg">
+                    <p>Télefono de contacto: 0800-11-3825-0894</p>
+                </div>
+            </section>
+            <section id='social'>
+                <ul>
+                    <li>
+                        <img class='icono' src="../iconos/instagram.svg">
+                        <a href="http://instagram.com">Instagram</a></li>
+                    <li>
+                        <img class='icono' src="../iconos/square-twitter.svg">
+                        <a href='http://twitter.com'>Twitter</a>
+                    </li>
+                    <li>
+                        <img class='icono' src="../iconos/facebook.svg">
+                        <a href='http://facebook.com'>Facebook</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section id="legal">
+            <p>&#169 Copyright 2022 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+    <script type="text/javascript" src="cambiar_psswrd.js"></script>
+</body>
+</html>

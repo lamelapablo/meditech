@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal MediTech</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <link rel="stylesheet" type="text/css" href="../iconos/iconos.css">
+    <link rel="icon" href="../imagenes/icono.ico">
+</head>
+<body>
+    <dialog id='completar-campos'>
+        <div>
+            <h3 id="mensaje-error">Faltan completar campos</h3>
+            <button class='btn' id="btn-cerrar">Cerrar</button>
+        </div>
+    </dialog>
+    <main class="main">
+        <div class="contenedor-login"> 
+            <section class="opciones">
+                <a href="index.html">
+                    <img id="headerlogo" src='../imagenes/LOGO INDEX.png'>
+                </a>
+                <h1>Inicia sesión</h1>
+            </section>
+            <section class="login-email">
+                <form method="POST" id='login-form' class='login-form' onsubmit='return false;'> 
+                    <p>Email</p>
+                    <input id='user-email' type="email" name='userEmail' class="input-email" placeholder="Ingresa tu email">
+                    <label id="error" class="validTexto">Ingrese un email válido</label>
+                    <p>Contraseña</p>
+                    <div id="contenedor-pswrd">
+                        <input id='password' name='password' type="password" class="input-password" placeholder="Ingresa tu contraseña">
+                        <img class='icono icono-pswrd mostrar' id='mostrar' src='../iconos/eye-solid.svg'>
+                        <img class='icono icono-pswrd ocultar' id='ocultar' src='../iconos/eye-slash-solid.svg'>
+                    </div>
+                    <input onclick='validarForm("login.php")' type="submit" class="btn-ingresar" value="Ingresar">
+                </form>
+                <div class="forgot">
+                    <a class="forgot-pass" href="../Recuperar_pswrd/rec_pswrd.html">
+                        Olvide mi contraseña
+                    </a>
+                </div>
+            </section>
+            <section class="legal">
+                <p>&#169 Copyright 2022 - Todos los derechos reservados</p>
+            </section>
+        </div>
+    </main>
+    <script type="text/javascript" src="validacion.js"></script>
+</body>
+</html>

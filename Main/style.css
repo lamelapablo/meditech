@@ -1,0 +1,182 @@
+body {
+    overflow: hidden;
+    font-family:  'Roboto', 'Open Sans', 'Helvetica', 'Arial', 'sans-serif';
+    background-image: url(../imagenes/doctorlogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+dialog{
+    margin: auto;
+    border-radius: 8px;
+}
+
+dialog div{
+    height: 130px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;    
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: background-color .5s, color .5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .5s, color .5s;
+    background-color: #62b6cb;
+}
+
+.main {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100vh;
+}
+
+.main a {
+    text-decoration: none;
+    color: rgba(98,182,203,1);
+}
+
+.contenedor-login {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    min-width: 500px;
+    background-color: white;
+    height: auto;
+}
+
+.login-email {
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.validTexto{
+    display: none;
+}
+
+.errorTexto {
+    color: red;
+}
+
+.valido {
+    border: solid green;
+    border-width: 3px;
+}
+
+.invalido {
+    border: solid red;
+    border-width: 3px;
+}
+
+.login-form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#contenedor-pswrd{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.ocultar{
+    display: none;
+}
+
+.mostrar{
+    display: inline;
+}
+
+.login-email p{
+    font-weight: bold;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.login-email input{
+    height: 3em;
+    border-radius: 0.2em;
+    border-style: solid;
+    padding: 1em;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.btn-ingresar {
+    margin-top: 1.3em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    color: white;
+    background-color: rgba(98,182,203,1);
+    border-radius: 0.3em;
+    border: 0;
+}
+
+.forgot{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.legal {
+    margin-top: 10px;
+    font-size: 0.7em;
+    color: gray;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.imagen { 
+    width: 90em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 20px;
+}
+
+.imagen img{
+    transform: scaleX(-1);
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+}
+
+#headerlogo {
+    margin-bottom: 3em;
+}
+
+@media (max-width: 600px){
+    body{
+        background-image: none;
+    }
+
+    .contenedor-login {
+        min-width: 100%;
+        padding: 16px;
+    }
+
+}

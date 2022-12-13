@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../main/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../main/header.css">
+    <link rel="stylesheet" type="text/css" href="../main/footer.css">
+    <link rel="stylesheet" type="text/css" href="../iconos/iconos.css">
+    <link rel="stylesheet" type="text/css" href="micuenta.css">
+    <link rel="stylesheet" type="text/css" href="../usuario paciente/nav.css">
+    <link rel="icon" href="../imagenes/icono.ico">
+    <title>Portal de Salud Meditech</title>
+</head>
+<body>
+    <dialog id="modal">
+        <form method="#">
+            <h2>Elige Tus Dias Laborales</h2>
+            <label><input type="checkbox">Lunes</label>
+            <label><input type="checkbox">Martes</label>
+            <label><input type="checkbox">Miercoles</label>
+            <label><input type="checkbox">Jueves</label>
+            <label><input type="checkbox">Viernes</label>
+            <label><input type="checkbox">Sabado</label>
+
+            <h2>Elige Tu Horario Laboral</h2>
+            <label><input type="checkbox">Turno Mañana (6am-12pm)</label>
+            <label><input type="checkbox">Turno Tarde (13pm-6pm)</label>
+            
+            <input type="submit" class='btn-modal' id="btn-confirmar" value="Confirmar">
+            <button type='reset' class='btn-modal' id="btn-cerrar-modal">Cerrar</button>
+        </form>
+    </dialog>
+    <header>
+        <a href="menu.html">
+            <img id="headerlogo" src='../imagenes/LOGO HEADER.png'>
+        </a>
+        <img class='icono' id='btn-menu' src='../iconos/bars-solid.svg'>
+    </header>
+    <div class="menu-flex">
+        <nav class="container-menu">
+            <ul> 
+                <a href="menu.html">
+                    <li>
+                        <img class='icono' src="../iconos/house-solid.svg">
+                        <p>Menu</p>
+                    </li>
+                </a>
+                <a href="turnos.html">
+                    <li>
+                        <img class= 'icono' src="../iconos/calendar-check-solid.svg">
+                        <p>Turnos</p> 
+                    </li>
+                </a> 
+                </a>
+                <a href="micuenta.html">
+                    <li>
+                        <img class='icono' src="../iconos/circle-user-solid.svg">
+                        <p>Mi Cuenta</p> 
+                    </li>
+                </a>
+            </ul>        
+        </nav>
+        <section id="contenido">
+            <h2>Mi Cuenta</h2>
+            <div id="contenedor-datos">
+                <form id="form-agregar-foto">
+                    <div id="contenedor-agregar-foto">
+                        <input type="file" capture='user' title="Agregar Foto" accept="image/*">
+                    </div>
+                    <input type="submit" value="Guardar Cambios">
+                </form>
+                <div id="contenedor-info-usuario">
+                    <div>
+                        <h3>Nombre: Juan</h3>
+                        <h3>Apellido: Pejinakis</h3>
+                        <h3>Mail: jpejinakis@uca.edu.ar</h3>
+                    </div>
+                    <div>
+                        <h3>Edad: 34</h3>
+                        <h3>Telefono: 0800-11-3825-0894</h3>
+                        <h3>DNI: 45748517</h3>
+                    </div>
+                    <div>
+                        <h3>Horario de trabajo: Turno Mañana(Lunes-Martes-Jueves) - Turno Tarde(Miercoles-Viernes)</h3>
+                    </div>
+                </div>
+            </div>
+            <div id="contenedor-cambiar-datos">
+                <a class='btn-cambiar-datos' href="../Cambiar_pswrd/cambiar-contraseña.html">
+                    <img src="../imagenes/icono-cambio-de-contraseña.png">
+                    <p>Cambiar mi contraseña</p>
+                </a>
+                <div class='btn-cambiar-datos' id="contenedor-horario-trabajo">
+                    <img src="../iconos/icono.calendario.png">
+                    <p>Horario de Trabajo</p>
+                </div>
+                <a class='btn-cambiar-datos' href="../Main/cerrar-sesion.php">
+                    <img src="../iconos/right-from-bracket-solid.svg">
+                    <p>Cerrar sesión</p>
+                </a>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div id="contenedor-footer">
+            <section id="ayuda">
+                <p>Servicio al cliente:</p>
+                <div>
+                    <img class='icono' src="../iconos/clock-regular.svg">
+                    <p>Horario de atencion: 8:00 hs - 18:00 hs</p>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/envelope-regular.svg">
+                    <a id="mail" href="mailto:soporte@meditech.com">Enviar un email</a>
+                </div>
+                <div>
+                    <img class='icono' src="../iconos/phone-solid.svg">
+                    <p>Télefono de contacto: 0800-11-3825-0894</p>
+                </div>
+            </section>
+            <section id='social'>
+                <ul>
+                    <li>
+                        <img class='icono' src="../iconos/instagram.svg">
+                        <a href="http://instagram.com">Instagram</a></li>
+                    <li>
+                        <img class='icono' src="../iconos/square-twitter.svg">
+                        <a href='http://twitter.com'>Twitter</a>
+                    </li>
+                    <li>
+                        <img class='icono' src="../iconos/facebook.svg">
+                        <a href='http://facebook.com'>Facebook</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <section id="legal">
+            <p>&#169 Copyright 2022 - Todos los derechos reservados</p>
+        </section>
+    </footer>
+    <script type="text/javascript" src="../usuario medico/micuenta.js"></script>
+    <script type="text/javascript" src="../usuario paciente/nav-responsive.js"></script>
+</body>
+</html>

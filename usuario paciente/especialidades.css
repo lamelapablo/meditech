@@ -1,0 +1,108 @@
+#contenido{
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    align-items: center;
+}
+
+#contenido > ul{
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#lista-especialidades > li{
+    margin: 10px 0;
+    width: 100%;
+    background-color: #e1eff6;
+    list-style-type: none;
+    /* border: 1px solid black; */
+    border-radius: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.list-item-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.medicos{
+    height: 0;
+    position: relative;
+    top: 10px;
+    transition: height .6s;
+}
+
+.medicos li {
+    list-style-type: none;
+    margin: 10px;
+    width: 95%;
+    background-color: #e1eff6;
+    list-style-type: none;
+    border: 1.4px solid black;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.medicos a{
+    text-decoration: none;
+}
+
+.btn-pedir-turno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 140px;
+    height: 40px;
+    /* border: 1.4px solid #000; */
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: background-color .5s, color .5s;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.btn-pedir-turno:hover{
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .5s, color .5s;
+    background-color: #62b6cb;
+}
+
+#contenido li:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: box-shadow 0.3s;
+}
+
+.mostrar-lista{
+    height: auto;
+}
+
+.mostrat-item-lista{
+    height: auto;
+    border: 1.4px solid black;
+    border-radius: 6px;
+    padding: 8px 16px;
+}
+
+.mostrar-boton{
+    height: auto;
+    font-size: auto;
+    border: 1.4px solid #000;
+    border-radius: 6px;
+}
+
+@media (max-width: 500px){
+    .btn-pedir-turno{
+        min-width: 110px;
+    }
+    
+}
+    
