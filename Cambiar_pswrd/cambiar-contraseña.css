@@ -86,7 +86,7 @@ form > div > div a{
     color: #000;
 }
 
-input[name='password'] {
+.input-pswrd{
     height: 40px;
     border-radius: 6px;
     padding: 4px;

@@ -24,18 +24,18 @@
     </header>
     <main>
         <h2>Cambiar Contraseña</h2>
-        <form id="form" onsubmit="return validarForm()">
+        <form method="POST" action="cambiar_pswrd.php" id="form" onsubmit="return validarForm()">
             <div id="form-contenedor">
                 <div class="tooltip">
                     <img class='icono' src="../iconos/key-solid.svg"></img>
-                    <input id='nueva-pswrd' type="password" name="password" placeholder="Ingrese su nueva contraseña">
+                    <input name='nueva-pswrd' class='input-pswrd' id='nueva-pswrd' type="password" placeholder="Ingrese su nueva contraseña">
                     <img class='icono icono-pswrd mostrar' id='mostrar' src='../iconos/eye-solid.svg'>
                     <img class='icono icono-pswrd ocultar' id='ocultar' src='../iconos/eye-slash-solid.svg'>
                     <span class='tooltiptext ocultar'>La contraseña debe contener 6 caracteres como mínimo.</span>               
                 </div>
                 <div class="tooltip">
                     <img class='icono' src="../iconos/key-solid.svg">
-                    <input id="confirmar-pswrd" type="password" name="password" placeholder="Reingrese su nueva contraseña">
+                    <input name='confirmar-pswrd' class='input-pswrd' id="confirmar-pswrd" type="password" placeholder="Reingrese su nueva contraseña">
                     <img class="icono icono-pswrd mostrar" src="../iconos/eye-solid.svg">
                     <img class='icono icono-pswrd ocultar' src='../iconos/eye-slash-solid.svg'>
                     <span class="tooltiptext ocultar">Las contraseñas no son iguales.</span> 

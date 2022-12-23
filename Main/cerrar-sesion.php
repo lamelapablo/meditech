@@ -13,5 +13,4 @@ function main(){
     header("Location: login.html");
 }
 main();
-  
 ?>
